@@ -22,5 +22,7 @@ module.exports = {
     'src/**/*.{js,vue}',
     '!src/main.js',
     '!**/node_modules/**'
-  ]
+  ],
+  verbose: true,
+  testURL: 'http://localhost/'
 }
