@@ -1,12 +1,8 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   rootDir: path.resolve(__dirname, '../../'),
-  moduleFileExtensions: [
-    'js',
-    'json',
-    'vue'
-  ],
+  moduleFileExtensions: ['js', 'json', 'vue'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },
@@ -25,4 +21,4 @@ module.exports = {
   ],
   verbose: true,
   testURL: 'http://localhost/'
-}
+};
