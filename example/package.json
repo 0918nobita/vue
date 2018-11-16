@@ -12,6 +12,21 @@
     "lint": "eslint --ext .js,.vue src test/unit --fix",
     "build": "node build/build.js"
   },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint",
+      "git add"
+    ],
+    "*.vue": [
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "vue": "^2.5.2"
   },
