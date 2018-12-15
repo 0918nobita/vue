@@ -16,9 +16,9 @@ export default {
     HelloWorld
   },
   created() {
-    console.log(`Before commit: ${this.$store.state.count}`); // => 0
+    console.log(`Before commit: ${this.$store.getters.count}`); // => 0
     this.$store.commit('increment');
-    console.log(`After commit: ${this.$store.state.count}`); // => 1
+    console.log(`After commit: ${this.$store.getters.count}`); // => 1
   }
 };
 </script>
