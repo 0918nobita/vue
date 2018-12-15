@@ -6,12 +6,19 @@
 </template>
 
 <script>
+import store from '@/store.js';
 import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
+  store,
   components: {
     HelloWorld
+  },
+  created() {
+    console.log(`Before commit: ${this.$store.state.count}`); // => 0
+    this.$store.commit('increment');
+    console.log(`After commit: ${this.$store.state.count}`); // => 1
   }
 };
 </script>
